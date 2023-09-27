@@ -1,0 +1,22 @@
+.error_components{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc6c;
+    font-family: sans-serif;
+}
+
+.error_components h1{
+    font-size: 101px;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #333;
+    margin-right: 20px;
+}
+.error_components span{
+    color: red;
+}
