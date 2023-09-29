@@ -17,7 +17,7 @@ registerRouter.post("/register",body('name').notEmpty(), body("email").isEmail()
             res.status(400).json({ message: errors.array()});
         }
 
-        const findingUser = await User.findOne({});
+        const findingUser = await User.findOne({email});
         if(findingUser){
             res.status(409).json({
                 message:"User Already Existed.!"

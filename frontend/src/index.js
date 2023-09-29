@@ -13,7 +13,6 @@ const App = () => {
     <div>
       <Header />
       <Outlet/>
-      <LoginForm />
     </div>
   );
 };
@@ -23,6 +22,10 @@ const appRouter = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
+      {
+        path: "/",
+        element: <LoginForm />,
+      },
       {
         path: "/register",
         element: <RegisterForm />,
