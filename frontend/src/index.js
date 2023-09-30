@@ -6,6 +6,7 @@ import RegisterForm from "./screen/RegisterForm";
 import Header from './Main/Header/Header';
 import LoginForm from "./screen/LoginForm";
 import Error from './ErrorComponents/Error';
+import Footer from './Main/Footer/Footer';
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
     <div>
       <Header />
       <Outlet/>
+      <Footer/>
     </div>
   );
 };

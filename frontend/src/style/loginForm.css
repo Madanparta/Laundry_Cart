@@ -12,6 +12,7 @@
 .login_container > .left_register_container{
     width:50%;
     height: 100vh;
+    padding-bottom: 100px;
 
     display: flex;
     justify-content: center;
@@ -61,6 +62,7 @@
     background: #B9C0FD1A 0% 0% no-repeat padding-box;
     width:50%;
     height: 100vh;
+    padding-bottom: 100px;
 
     display: flex;
     align-items: start;
@@ -78,8 +80,8 @@
 
 .login_container > .right_login_container > .right_container{
     margin-top: 60px;
-    margin-left: 130px;
-    width: 300px;
+    margin-left: 100px;
+    width: 350px;
 }
 .login_container > .right_login_container > .right_container form div{
     width: 100%;
@@ -98,14 +100,17 @@
     padding-left: 2px;
     font-size: 17px;
     letter-spacing: 0.6px;
-    color: #cccccc87;
+    color: black;
     outline: none;
     
 }
-.password-toggle{
+.password-inbox{
     position: relative;
-    bottom: 30px;
-    left: 260px;
+}
+.password-toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
     color: #ccc;
 }
 .login_container > .right_login_container > .right_container form p{

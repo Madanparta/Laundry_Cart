@@ -5,6 +5,7 @@ const app = express();
 const dataBase = require("./Database/dbServer");
 const registerRouter =require("./Router/registerRouter");
 const contactRouter = require("./Router/contactsRouter");
+const cors = require("cors");
 
 dataBase() //connect to database..
 
@@ -18,8 +19,8 @@ const logger = (req,res,next)=>{
     console.log(`Request recived at ${new Date()} on path ${req.url}`);
     next();
 }
-
 app.use(logger);
+app.use(cors())
 app.use(express.json());
 app.use("/api",registerRouter);
 app.use("/api",contactRouter);

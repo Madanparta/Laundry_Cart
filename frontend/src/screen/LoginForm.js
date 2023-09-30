@@ -38,7 +38,7 @@ const LoginForm = () => {
               <input placeholder='Mobil / Email' type="text" id="email" name="email" required value={email} onChange={(e) => setemail(e.target.value)} />
             </div>
 
-            <div>
+            <div className='password-inbox'>
               <input placeholder='Password' type={showPassword ? 'text' : 'password'} id="password" name="password"required value={password} onChange={(e) => setPassword(e.target.value)}/>
               <span className="password-toggle" onClick={handlePasswordToggle}>
                 {showPassword ? <i style={{cursor:"pointer"}} class="fa-solid fa-lock-open"></i> : <i style={{cursor:"pointer"}} class="fa-solid fa-lock"></i>}
