@@ -97,11 +97,13 @@ registerRouter.put('/forgotpassword',async (req,res)=>{
     try{
         const {email,password} = req.body;
         const isUser = isNaN(Number(email))? await User.findOne({email:email}):await User.findOne({phone:email});
-
+        
         if(!isUser){
             return res.status(400).send("No User Exists With given Email / Phone Number");
         }else{
+            // console.log(isUser)
             bcrypt.hash(password,10,async function(err,hash){
+
                 const map = {password:hash}
                 if(err){
                     return res.status(400).json({

@@ -7,6 +7,7 @@ import Header from './Main/Header/Header';
 import LoginForm from "./screen/LoginForm";
 import Error from './ErrorComponents/Error';
 import Footer from './Main/Footer/Footer';
+import Forgot from './screen/Forgot';
 
 
 const App = () => {
@@ -31,6 +32,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/register",
         element: <RegisterForm />,
+      },
+      {
+        path: "/forgotpassword",
+        element: <Forgot />,
       },
     ],
     errorElement: <Error />,
