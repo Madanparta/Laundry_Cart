@@ -52,61 +52,76 @@ registerRouter.post("/register",body('name').notEmpty(), body("email").isEmail()
 
 
 // creating user Login..
-registerRouter.post("/login", async (req,res)=>{
+registerRouter.post("/", async (req,res)=>{
     try{
 
-        const {email,password} = req.body;
-        // console.log(email,password);
+        const { email, password } = req.body;
 
-        const errors = validationResult(req);
+        const isUser = isNaN(Number(email)) ? await User.findOne({ email: email }): await User.findOne({ phone: email });
+        // console.log(isUser);
 
-        if (!errors.isEmpty()) {
-            res.status(400).json({ message: errors.array()});
-        }
-
-        // console.log(parseInt(email));
-        let findingUser;
-        if(parseInt(req.body.email)){
-            let phoneNo = parseInt(req.body.email);
-            findingUser = await User.findOne({phone:phoneNo});
+        if (!isUser) {
+            return res.status(400).send("No User Exists With given Email / Phone Number")
         }else{
-            findingUser = await User.findOne({email});
-        }
-
-        if(!findingUser){
-            res.status(401).json({
-                message:"Please input valid email/Phone or register"
-            })
-        
-        }else{
-            const result = await bcrypt.compare(password, findingUser.password)
+            const result = await bcrypt.compare(password, isUser.password)
                 // Store hash in your password DB.
                 // console.log(result)
             if(result){
                 const token = jwt.sign({
-                    user: findingUser.email
+                    user: isUser.email
                   }, process.env.SECRET_KEY, { expiresIn: '1h' });
     
                 //   console.log(token)
                 res.status(200).json({
-                    status:"Success",
-                    message:token
+                    "Message": `Logged In SuccessFully Welcome ${isUser.name}`,
+                    "Name": isUser.name,
+                    "Address": isUser.address,
+                    "Token": token
                 })
             }else{
-                res.status(401).json({
-                    status:"Success",
-                    message:"somthing wrong.."
-                })
+                return res.status(401).send("Invalid Credentials")
             }
+
         }
+            
     }catch(error){
         res.status(400).json({
-            status:"Failer",
-            message:"Bad Request"
+            "Message": error.message
         })
     }
 });
 
+// forgot password..
 
+registerRouter.put('/forgotpassword',async (req,res)=>{
+    try{
+        const {email,password} = req.body;
+        const isUser = isNaN(Number(email))? await User.findOne({email:email}):await User.findOne({phone:email});
+
+        if(!isUser){
+            return res.status(400).send("No User Exists With given Email / Phone Number");
+        }else{
+            bcrypt.hash(password,10,async function(err,hash){
+                const map = {password:hash}
+                if(err){
+                    return res.status(400).json({
+                        "Error":err.message
+                    })
+                }else{
+                    const updateDate = await User.findByIdAndUpdate(isUser._id,map,{
+                        new:true,
+                        userFindAndModity:false
+                    })
+                    res.status(200).json({
+                        message: "Password Updated",
+                        "User": updateDate
+                    })
+                }
+            })
+        }
+    }catch(error){
+        res.status(400).send(error.message)
+    }
+})
 
 module.exports = registerRouter;
