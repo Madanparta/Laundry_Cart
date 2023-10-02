@@ -16,6 +16,7 @@ const RegisterForm = () => {
   const [hide, setHide] = useState(true);
   const [loading, setLoading] = useState(false);
 
+
   const navigate = useNavigate()
   const handlerRoute = () =>{
     navigate('/')

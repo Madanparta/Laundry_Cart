@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 import {createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
@@ -9,40 +9,60 @@ import Error from './ErrorComponents/Error';
 import Footer from './Main/Footer/Footer';
 import Forgot from './screen/Forgot';
 
+import OHeader from "./screen/order/OrderHeader/OHeader";
+
 
 const App = () => {
   return (
+    <>
     <div>
+      <OHeader/>
+    </div>
+    
+    {/* <div>
       <Header />
       <Outlet/>
       <Footer/>
-    </div>
+    </div> */}
+    </>
   );
 };
 
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    children: [
-      {
-        path: "/",
-        element: <LoginForm />,
-      },
-      {
-        path: "/register",
-        element: <RegisterForm />,
-      },
-      {
-        path: "/forgotpassword",
-        element: <Forgot />,
-      },
-    ],
-    errorElement: <Error />,
-  },
-]);
+// const appRouter = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <App />,
+//     children: [
+//       {
+//         path: "/",
+//         element: <LoginForm/>,
+//       },
+//       {
+//         path: "/register",
+//         element: <RegisterForm />,
+//       },
+//       {
+//         path: "/forgotpassword",
+//         element: <Forgot />,
+//       },
+//     ],
+//     errorElement: <Error />,
+//   },
+// ]);
   
+const appRouter2 = createBrowserRouter([
+  {
+    path:'/',
+    element:<App/>,
+    children:[
+      {
+        errorElement: <Error />,
+      }
+    ]
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RouterProvider router={appRouter}/>);
+// root.render(<RouterProvider router={appRouter}/>);
+root.render(<RouterProvider router={appRouter2}/>);
 

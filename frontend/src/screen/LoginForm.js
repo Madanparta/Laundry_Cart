@@ -8,7 +8,7 @@ import load from "../assets/load.gif";
 const API = "http://localhost:5000/api/";
 
 const LoginForm = () => {
-
+  // setChecking(false)
   const [error, setError] = useState();
   const [hide, setHide] = useState(true);
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ const LoginForm = () => {
     email: "",
     password: "",
   });
-
+  console.log(data)
   const navigate = useNavigate();
   const RegisterRoute = () => {
     navigate("/register");
