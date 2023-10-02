@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+/* -------summary_holder------ */
+#summary_holder{
+    width: 98.9vw;
+    min-height: 100vh;
+    position: fixed;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+/* --------Summary_page------- */
+
+#summary_page{
+    float: right;
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+}
+/* -------------- summary_header ------------------- */
+#summary_header{
+    background-color: #5861AE;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+#summary_header>*{
+    font-size: 1.3em;
+    
+}
+#summary_header>h3{
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+#summary_header>i{
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+
+/* -----------Store_addrs------------ */
+
+.store_addrs{
+    background-color: #F4F9FF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_addrs>select{
+    margin-left: 20px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    background-color: inherit;
+
+}
+
+.store_addrs>dl{
+    margin-right: 30px;
+}
+
+
+/* ------------order_details--------------- */
+
+.order_details{
+    height: 5vh;
+    
+}
+
+/* ---------------ssummary_order_container----------------------- */
+
+.summary_order_container{
+    display:grid;
+    grid-template-columns: 40% 35% 19% auto;
+    border-bottom: 1px solid #E0E0E0;
+    
+
+}
+
+.summary_order_container>*{
+    height: 40px;
+}
+
+.summary_wash_type{
+    font-style: italic;
+}
+
+.single_total{
+    color: #5861AE;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.summary_orderlist{
+    height: 30vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.summary_title_name{
+    padding-top: 10px;
+    padding-left:6px;
+    padding-bottom: 24px;
+}
+
+.summary_prodduct_type{
+    font-size: 1.1em;
+    padding-left: 20px;
+}
+
+.summary_sub_total,.summary_pickup{
+    text-align: end;
+}
+
+.summary_sub_total,.summary_pickup{
+    font-size: 1.2em;
+    padding-right: 4%;
+}
+
+.summary_sub_total>span,.summary_pickup>span{
+    color: #5861AE;
+    font-weight: 700;
+}
+
+.total_price{
+    background-color: #5861AE;
+    color:white;
+    text-align: end;
+    font-size: 1.3em;
+    position: relative;
+    top: 15%;
+    padding: 10px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    border-bottom: 1px solid darkgray;
+}
+
+/* -----------Address------------- */
+
+.address_holder{
+    position: relative;
+    top:43%
+}
+
+.address_title{
+    margin: 20px;
+    padding-top: 18px;
+}
+
+.address_container{
+    display: flex;
+
+    
+}
+
+.address_container> address{
+    cursor: pointer;
+    border: 1px solid #5861AE;
+    height: 70px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 10px 20px ;
+    box-shadow: 1px 1px 8px;
+}
+.address_container> address>*{
+    margin-left: 10px;
+}
+
+.address_btn{
+    border: 0;
+    background-color: inherit;
+    margin-left: 10px;
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #5861AE;
+}
+.add-tick{
+    position: absolute;
+    cursor: pointer;
+    bottom: 44%;
+    left: 29%;
+}
+/* -----------------error----------------------- */
+.summary_error{
+    color: red;
+    float: left;
+    position: relative;
+    top:43%
+}
+
+/* --------- summary_confirm ------------ */
+
+
+.summary_confirm{
+    position: relative;
+    top: 45%;
+    float: right;
+    margin-right: 15px;
+    color: white;
+    background-color: #5861AE;
+    width: 80px;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    clear: both;
+}
+
+.summary_confirm:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.summary_confirm:active{
+    transform: translateY(5px);
+}

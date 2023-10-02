@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+
+.success_holder {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.192);
+}
+
+
+.success_component {
+    width: 350px;
+    height: 400px;
+    background-color: rgb(245, 243, 243);
+    position: relative;
+    top: 25%;
+    left: 40%;
+    border-radius: 10px;
+
+
+}
+
+.success_img {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 10%;
+    left: 35%
+}
+
+.success_component>h4 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.success_component>p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.success_component>button {
+    margin: 20px;
+    position: relative;
+    bottom: 5%;
+    left: 25%;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #5861AE;
+    border: 0;
+    color: white;
+}

@@ -1,0 +1,27 @@
+.navbar-container {
+    /* display: inline; */
+    position: fixed;
+    float: left;
+    width: 3.53%;
+    height: 100vh;
+    background-color: rgb(88,97,174);
+}
+
+.navbar > span:first-child > i{
+    margin-top: 1rem;
+}
+
+.navbar > span > i{
+    padding: 1rem;
+}
+
+.navbar > span > i:hover{
+    background-color: aliceblue;
+    cursor: pointer;
+    
+}
+
+
+.selector {
+    background-color: aliceblue;
+}
