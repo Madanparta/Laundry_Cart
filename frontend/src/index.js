@@ -13,6 +13,7 @@ import Forgot from './screen/Forgot';
 import OHeader from "./screen/order/OrderHeader/OHeader";
 import SideBar from './screen/order/sideBar/SideBar';
 import MainOrderDashBord from "./screen/order/MainOrderDashBord";
+import OFooter from './screen/order/orderFooter/OFooter';
 
 
 const App = () => {
@@ -20,10 +21,12 @@ const App = () => {
     <>
     <div>
       <OHeader/>
+      <Outlet/>
       <div className="mainContainer">
         <SideBar/>
         <MainOrderDashBord/>
       </div>
+      <OFooter/>
     </div>
     
     {/* <div>
