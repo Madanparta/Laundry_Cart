@@ -4,6 +4,7 @@ const { body, validationResult } = require("express-validator");
 const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 router.use(bodyParser.json());
+require('dotenv').config();
 
 router.post(
   "/register",

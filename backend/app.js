@@ -6,6 +6,7 @@ const RegistrationRoute = require("./Router/registertionRoutes");
 const LoginRoute = require('./Router/loginRoutes');
 const orderRoutes = require("./Router/orderRoutes");
 const Authentication = require("./middleware/autherization");
+require('dotenv').config();
 
 app.use(cors());
 
@@ -14,13 +15,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
-
-
-const logger = (req,res,next)=>{
-    console.log(`Request recived at ${new Date()} on path ${req.url}`);
-    next();
-}
-app.use(logger);
 
 app.use('/' ,RegistrationRoute)
 app.use('/',LoginRoute)

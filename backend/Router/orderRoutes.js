@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const ordersModel = require("../Models/orderSchema");
 const ProductModel = require("../Models/productSchema");
+require('dotenv').config();
 
 
 router.post("/createorder",async(req,res)=>{

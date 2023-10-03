@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const registerSchema = mongoose.Schema({
+const registerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     phone: { type: Number, unique:true },
     district: { type: String, required: true },
