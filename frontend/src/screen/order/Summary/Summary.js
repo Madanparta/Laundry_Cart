@@ -4,6 +4,8 @@ import tick from '../../../assets/tick.png';
 import axios from "axios";
 import { useState } from "react";
 
+const API = "https://laundry-cart-madan.onrender.com";
+
 const Summary = (props) => {
 
     const [click , setClick] = useState(false)
@@ -124,7 +126,7 @@ const Summary = (props) => {
               // console.log(completeData);
               async function postCall() {
                 try {
-                  let url = process.env.REACT_APP_API + "/createorder";
+                  let url = API + "/createorder";
                   await axios(url, {
                     method: "post",
                     data: completeData,

@@ -1,9 +1,9 @@
 import React from 'react';
 import "./cancel_order.css";
 
-const API = "http://localhost:5000/api/";
+const API = "https://laundry-cart-madan.onrender.com";
 
-const Cancel_Order = (props) => {
+const CancelOrder = (props) => {
 
     const cancelOrder = async () =>{
         const token = localStorage.getItem("token");
@@ -65,4 +65,4 @@ const Cancel_Order = (props) => {
   );
 }
 
-export default Cancel_Order
+export default CancelOrder

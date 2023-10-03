@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import "./successOrder.css';"
+import "./successOrder.css";
 
 export default function SuccessOrder(props){
 

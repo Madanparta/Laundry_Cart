@@ -25,7 +25,7 @@ export default function Orders(props) {
       </div>
       <div className="washType_container">
         <img
-          src={`./images/icon-for-createorder/washing-machine${
+          src={`./assets/icon-for-createorder/washing-machine${
             data.washing_types.wash.status ? "-blue" : ""
           }.svg`}
           alt="wash"
@@ -37,7 +37,7 @@ export default function Orders(props) {
           }}
         />
         <img
-          src={`./images/icon-for-createorder/ironing${
+          src={`./assets/icon-for-createorder/ironing${
             data.washing_types.press.status ? "-blue" : ""
           }.svg`}
           alt="press"
@@ -49,7 +49,7 @@ export default function Orders(props) {
           }}
         />
         <img
-          src={`./images/icon-for-createorder/towel${
+          src={`./assets/icon-for-createorder/towel${
             data.washing_types.fold.status ? "-blue" : ""
           }.svg`}
           alt="fold"
@@ -61,7 +61,7 @@ export default function Orders(props) {
           }}
         />
         <img
-          src={`./images/icon-for-createorder/bleach${
+          src={`./assets/icon-for-createorder/bleach${
             data.washing_types.pack.status ? "-blue" : ""
           }.svg`}
           alt="pack"

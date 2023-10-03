@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from 'react';
-import CancelOrder from "../Cancel-order/Cancel_Order";
+import CancelOrder from "../Cancel-order/CancelOrder";
 import "./summary_cancel.css";
 
 export default function Summary_cancel(props){

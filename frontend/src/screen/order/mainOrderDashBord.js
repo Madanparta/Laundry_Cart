@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import "../order/mainOrderDashBord.css";
 import {Link, useNavigate} from "react-router-dom";
-import CancelOrder from "./Cancel-order/Cancel_Order";
+import CancelOrder from "./Cancel-order/CancelOrder";
 import Summary from "./Summary-cancel/Summary_cancel";
 
 
-const API = "http://localhost:5000/api/";
+const API = "https://laundry-cart-madan.onrender.com";
 
 const MainOrderDashBord = () => {
 

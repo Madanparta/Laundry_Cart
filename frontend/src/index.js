@@ -14,6 +14,9 @@ import OHeader from "./screen/order/OrderHeader/OHeader";
 import SideBar from './screen/order/sideBar/SideBar';
 import MainOrderDashBord from "./screen/order/MainOrderDashBord";
 import OFooter from './screen/order/orderFooter/OFooter';
+import CancelOrder from './screen/order/Cancel-order/CancelOrder';
+import CreaterOrder from './screen/order/CreaterOrder/CreaterOrder';
+import Summary from './screen/order/Summary/Summary';
 
 
 const App = () => {
@@ -64,6 +67,24 @@ const appRouter2 = createBrowserRouter([
   {
     path:'/',
     element:<App/>,
+    children:[
+      {
+        path:"/updateorder",
+        element: <CancelOrder />,
+      },
+      {
+        path:"/product",
+        element:<CreaterOrder/>
+      },
+      {
+        path:"/createorder",
+        element:<Summary/>
+      },
+      {
+        path:"/prevorder",
+        element:<MainOrderDashBord/>
+      },
+    ],
     errorElement: <Error />,
   }
 ])
