@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+.order_container{
+    display: grid;
+    grid-template-columns: 27% 20% 31% 10% auto;
+    border-bottom: 1px solid #E0E0E0;
+    font-family: 'Open Sans', sans-serif;
+    height: 80px;
+}
+
+.product_detail{
+    margin:10px 14px ;
+}
+
+.product_img{
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+
+.product_heading{
+    margin-left:60px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+}
+
+.product_description{
+    font-size: 0.9em;
+    color: #76788B;
+}
+
+.input_container{
+    padding-top: 15px;
+}
+
+
+.product_input{
+    width: 20%;
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    margin-top: 13px;
+}
+
+
+.washType_container>*{
+    width: 26px;
+    height: 30px;
+    margin: 10px 30px;
+}
+
+.price_holder{
+    font-size: 1.1em;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.price_holder>span{
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #5861AE;
+}
+
+.reset_btn{
+    margin-top: 20px;
+    color: #5861AE;
+    border: 1px solid #5861AE;
+    background-color: white ;
+    width: 60px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.washType_container>*:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.reset_btn:hover{
+    transform: scale(1.1);
+    background-color: #5861AE ;  
+    color: white;
+    cursor: pointer;
+}

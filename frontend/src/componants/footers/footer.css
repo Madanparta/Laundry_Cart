@@ -1,0 +1,87 @@
+.foot-container {
+    border-top: 2px solid #5861AE;
+    background: #F8F9FF 0% 0% no-repeat padding-box;
+    box-shadow: 0px -3px 6px #0000000B;
+}
+
+.footer-1 {
+    margin-left: 32%;
+    width: auto;
+    height: 33px;
+    text-align: left;
+    font: normal normal 600 24px/26px Open Sans;
+    letter-spacing: 0.96px;
+    color: #5861AE;
+    opacity: 1;
+}
+
+.footer-2 {
+    width: 183px;
+    height: 14px;
+    margin-left: 43%;
+    text-align: left;
+    font: italic normal normal 10px/26px Open Sans;
+    letter-spacing: 0.4px;
+    color: #3D3D43;
+    opacity: 1;
+}
+
+.footer-img {
+    width: 100%;
+}
+
+.footer-3 {
+    text-align: center;
+    background-color: #182838;
+    color: whitesmoke;
+}
+
+.foot-contant {
+    position: relative;
+}
+
+.cont-1,
+.cont-2,
+.cont-3,
+.cont-4,
+.cont-5,
+.cont-6 {
+    cursor: pointer;
+    font: normal normal medium 16px/24px Avenir;
+    letter-spacing: 0.16px;
+    color: #182838;
+    position: absolute;
+    top: 114vh;
+
+ 
+
+}
+.cont-2 > p , .cont-4 > p , .cont-6 >p{
+    margin-bottom: 10px;
+}
+
+.cont-1 {
+    left: 80px;
+    top: 113vh;
+    font: normal normal medium 18px/24px Avenir;
+}
+
+.cont-2 {
+    left: 40%;
+}
+
+.cont-3 {
+    left: 50%;
+}
+
+.cont-4 {
+    left: 60%;
+}
+
+.cont-5 {
+    left: 70%;
+}
+
+.cont-6 {
+    left: 80%;
+}

@@ -1,0 +1,187 @@
+.wrapper {
+    display: flex;
+}
+
+.para-data {
+    width: 30%;
+    height: 90vh;
+}
+
+.form-data {
+
+    width: 70%;
+    height: 90vh;
+    background-color: #F8F9FF;
+    opacity: 1;
+}
+
+.part-1 {
+    margin-top: 20%;
+    margin-bottom: 0;
+    padding-left: 20%;
+    width: 284px;
+    height: 197px;
+    text-align: left;
+    font: normal normal 900 62px/80px Avenir;
+    letter-spacing: 2.48px;
+    color: #5861AE;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.part-2,
+.part-3,
+.part-4 {
+
+    padding-left: 20%;
+    text-align: left;
+    font: normal normal normal 20px/32px Avenir;
+    letter-spacing: 0.8px;
+    color: #565657;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.part-3 {
+    position: relative;
+    bottom: 1%;
+}
+
+.part-4 {
+    position: relative;
+    top: 6%;
+}
+
+.part-5 {
+    position: relative;
+    top: 10%;
+    margin-left: 20%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font: normal normal bold 15px/20px Open Sans;
+    letter-spacing: 0.3px;
+    color: #5861AE;
+    border: 2px solid #5861AE;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.form-data {
+
+    display: flexbox;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.table>input , div>input , .form-err{
+    margin-left: 10%;
+    margin-bottom: 5%;
+    width: 300px;
+    height: 30px;
+    border: 0;
+    border-bottom: 1px solid #989898;
+    background-color: #F8F9FF;
+}
+
+.register-head {
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 157px;
+    height: 44px;
+    /* UI Properties */
+    text-align: left;
+    font: normal normal medium 32px/60px Avenir;
+    letter-spacing: 1.28px;
+    color: #5861AE;
+    text-transform: uppercase;
+    opacity: 1;
+
+}
+
+#terms {
+    margin-left: 10%;
+    width: 20%;
+    height: 22px;
+    /* UI Properties */
+    text-align: left;
+    text-decoration: underline;
+    font: normal normal normal 14px/20px Open Sans;
+    letter-spacing: 0.49px;
+    color: #5861AE;
+    opacity: 1;
+
+}
+
+label {
+    position: relative;
+    right: 8%;
+
+    width: 566px;
+    height: 22px;
+
+    text-align: left;
+    text-decoration: underline;
+    font: normal normal normal 14px/20px Open Sans;
+    letter-spacing: 0.49px;
+    color: #5861AE;
+    opacity: 1;
+}
+
+.btn-regis {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 40%;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font: normal normal bold 15px/20px Open Sans;
+    letter-spacing: 0.3px;
+    color: #FFFFFF;
+    background: #5861AE 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+    border: 0;
+}
+
+.err {
+    color: red;
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+.side{
+    border-left: 2px solid blue;
+}
+.popup{
+    position: absolute;
+    z-index: 2;
+    width: 400px;
+    background: lightblue;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+}
+.popup img{
+    margin-top: -70px;  
+}
+.popup-sub-btn{
+    cursor: pointer;
+    width: 150px;
+height: 50px;
+border: 0;
+text-align: center;
+font: normal normal bold 15px/20px Open Sans;
+letter-spacing: 0.3px;
+color: #FFFFFF;
+background: #4552C1 0% 0% no-repeat padding-box;
+border-radius: 4px;
+}
+.form-err{
+    color: red;
+}
