@@ -7,8 +7,7 @@ const secret = process.env.SECRET_KEY;
 
 
 
-router.post('/login'
-    , async (req, res) => {
+router.post('/login', async (req, res) => {
         try {
             const { username, password } = req.body; //username is phone or email
 

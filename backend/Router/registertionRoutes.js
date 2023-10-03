@@ -6,25 +6,13 @@ const bcrypt = require("bcrypt");
 router.use(bodyParser.json());
 require('dotenv').config();
 
-router.post(
-  "/register",
-  body("email").isEmail(),
-  body("password").isLength({ min: 5, max: 16 }),
-  async (req, res) => {
+router.post("/register",body("email").isEmail(),body("password").isLength({ min: 5, max: 16 }), async (req, res) => {
     try {
-      const {
-        name,
-        email,
-        password,
-        phone,
-        district,
-        pincode,
-        state,
-        address,
-      } = req.body;
+      const { name,email,password,phone,district,pincode,state,address} = req.body;
 
       const isUser = await User.findOne({ email: email }); //checking if user alredy exist with given mail id
       const isUserr = await User.findOne({ phone: phone });
+      
       if (isUser || isUserr) {
         return res
           .status(403)
