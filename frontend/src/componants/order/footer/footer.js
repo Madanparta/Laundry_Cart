@@ -4,7 +4,7 @@ const FooterOrder = () => {
     return (
         <>
             <footer className="foot-container">
-                <div className="footer-3">2022 © LAUNDRY</div>
+                <div className="footer-3">2023 © LAUNDRY</div>
             </footer>
         </>
     )

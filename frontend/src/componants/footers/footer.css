@@ -6,10 +6,12 @@
 
 .footer-1 {
     margin-left: 32%;
+    padding-top: 5px;
     width: auto;
     height: 33px;
     text-align: left;
     font: normal normal 600 24px/26px Open Sans;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.96px;
     color: #5861AE;
     opacity: 1;
@@ -21,6 +23,7 @@
     margin-left: 43%;
     text-align: left;
     font: italic normal normal 10px/26px Open Sans;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.4px;
     color: #3D3D43;
     opacity: 1;
@@ -48,10 +51,11 @@
 .cont-6 {
     cursor: pointer;
     font: normal normal medium 16px/24px Avenir;
+    font-family: 'Open Sans', sans-serif;
     letter-spacing: 0.16px;
     color: #182838;
     position: absolute;
-    top: 114vh;
+    top: 135vh;
 
  
 
@@ -62,8 +66,9 @@
 
 .cont-1 {
     left: 80px;
-    top: 113vh;
+    top: 135vh;
     font: normal normal medium 18px/24px Avenir;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .cont-2 {
