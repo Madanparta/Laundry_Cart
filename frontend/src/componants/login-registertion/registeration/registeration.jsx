@@ -9,6 +9,7 @@ import tick from "../../../Images/tick.png";
 import Axios from 'axios';
 import load from "../../../Images/load.gif"
 const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com";
+// const API = process.env.REACT_APP_API || "http://localhost:5000";
 
 
 
@@ -65,11 +66,13 @@ const Registration = () => {
             password: data.password
         })
             .then(res => {
+                // console.log("success....")
                 setError()
                 setLoading(false);
                 setPopup(true);
                 
             }).catch((e) => {
+                // console.log(e.message)
                 setLoading(false)
                 setError(JSON.stringify(e.response.data))
             })

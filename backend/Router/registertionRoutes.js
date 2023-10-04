@@ -10,6 +10,8 @@ router.post("/register",body("email").isEmail(),body("password").isLength({ min:
     try {
       const { name,email,password,phone,district,pincode,state,address} = req.body;
 
+      console.log(name,email,password,phone,district,pincode,state,address)
+
       const isUser = await User.findOne({ email: email }); //checking if user alredy exist with given mail id
       const isUserr = await User.findOne({ phone: phone });
       
