@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Axios from "axios";
 import "./cancelOrder.css";
 
-// const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
-const API = process.env.REACT_APP_API || "http://localhost:5000"
+const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
+// const API = process.env.REACT_APP_API || "http://localhost:5000"
 
 const CancelOrder = (props) => {
     

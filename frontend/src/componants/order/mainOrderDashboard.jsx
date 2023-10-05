@@ -7,8 +7,8 @@ import FooterOrder from "./footer/footer";
 import {Link, useNavigate} from "react-router-dom";
 import Summary from "./summary-cancel/summary-cancel";
 
-// const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
-const API = process.env.REACT_APP_API || "http://localhost:5000"
+const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
+// const API = process.env.REACT_APP_API || "http://localhost:5000"
 
 const OrderMain = () => {
     const navigate = useNavigate()
