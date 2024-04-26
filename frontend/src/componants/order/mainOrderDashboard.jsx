@@ -6,17 +6,13 @@ import CancelOrder from "./cancel-order/cancelOrder";
 import FooterOrder from "./footer/footer";
 import {Link, useNavigate} from "react-router-dom";
 import Summary from "./summary-cancel/summary-cancel";
+import axios from "axios";
 
-const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
-// const API = process.env.REACT_APP_API || "http://localhost:5000"
+// const API = process.env.REACT_APP_API || "https://laundry-cart-madan.onrender.com"
+const API = process.env.REACT_APP_API || "http://localhost:5000/api"
 
 const OrderMain = () => {
     const navigate = useNavigate()
-    useEffect(() => {
-        if (!localStorage.getItem('token')) {
-            navigate('/')
-        }
-    },[]);
     
     const [ordersDetail, setOrderDetail] = useState([]);
     const [cancelDisplay, setCancelDisplay] = useState("none");
@@ -43,23 +39,28 @@ const OrderMain = () => {
     }
 
     useEffect(() => {
-        fetch(API + "/prevorder", {
-        method: "GET",
-        headers: {
-            Authorization: token
+        if (!token) {
+            navigate('/')
         }
-        }).then(res => {
-            return res.json();
-        }).then(data => {
-            console.log(data.orders)
-            setOrderDetail(data.orders)
-        })
-    }, []);
+    },[token]);
 
+    useEffect(() => {
+        async function fetchDashbord(){
+            try {
+                const res =await axios.get(API+'/prevorder');
+                if(res.status !== 200){
+                    console.log("Unble to get")
+                }
+                // setOrderDetail(res?.orders) 
+                setOrderDetail(res?.data?.orders)
+            
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        token && fetchDashbord();
+    },[token]);
 
-
-
-    
     return (
         <>
         <OrderNavBar/>
@@ -108,7 +109,7 @@ const OrderMain = () => {
                             </tr>
                         </thead>
                         <tbody className="table-body">
-                        {ordersDetail.map((data, i) => {
+                        {ordersDetail && ordersDetail.map((data, i) => {
                             return (
                                     <tr className="table-body" key={i}>
                                         <td>{`OR000${i+1}`}</td>

@@ -77,6 +77,8 @@ export default function CreateOrder(){
          FCall(); 
       },[navigate]);
 
+    //   console.log(productData)
+
     return<>
     <OrderNavBar/>
     <SideNavbar/>

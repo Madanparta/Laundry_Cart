@@ -3,6 +3,7 @@ import "./orders.css"
 
 export default function Orders(props){
     const {data,productDispatcher} = props;
+    console.log(data)
     return<div className="order_container">
         <div className="product_detail">
         <img className="product_img" src={data.icon} alt={data.product_type}/>

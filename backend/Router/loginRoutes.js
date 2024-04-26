@@ -2,7 +2,7 @@ const router = require('express').Router();
 const User = require("../Models/userSchema");
 const jwt = require("jsonwebtoken");
 require('dotenv').config();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const secret = process.env.SECRET_KEY;
 
 
@@ -18,34 +18,22 @@ router.post('/login', async (req, res) => {
             if (!isUser) {
                 return res.status(400).send("No User Exists With given Email / Phone Number")
             } else {
-                bcrypt.compare(req.body.password, isUser.password, function (err, result) { // comparing password
-                    if (err) {
-                        return res.status(401).json({
-                            "Message": err.message
-                        })
-                    }
-                    if (result) {
-                        const token = jwt.sign({             //pwd crrct creating jwt
-                            exp: Math.floor(Date.now() / 1000) + (60 * 60),
-                            data: isUser._id
-                        }, secret);
-
-                        return res.status(200).json({
-                            "Message": `Logged In SuccessFully Welcome ${isUser.name}`,
-                            "Name": isUser.name,
-                            "Address": isUser.address,
-                            "Token": token
-                        })
-                    } else {
-                        return res.status(401).send("Invalid Credentials")
-                    }
-
+                const comparePassword = bcrypt.compareSync(password,isUser.password);
+                if(!comparePassword){
+                    return res.status(401).json({
+                        "Message": err.message
+                    })
+                }
+                const token = jwt.sign({
+                    id:isUser._id
+                },secret,{expiresIn:'1d'})
+                res.status(200).json({
+                    "Message": `Logged In SuccessFully Welcome ${isUser.name}`,
+                    "Name": isUser.name,
+                    "Address": isUser.address,
+                    "Token": token
                 })
-
             }
-
-
-
         } catch (e) {
             return res.status(400).json({
                 "Message": e.message

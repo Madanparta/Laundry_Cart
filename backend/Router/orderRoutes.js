@@ -38,10 +38,9 @@ router.get("/product",Authentication,async(req,res)=>{
     }
 });
 
-router.get("/prevorder",Authentication, async (req, res) => {
-    // console.log(req)
+router.get("/prevorder",async (req, res) => {
     try {
-        const orders = await ordersModel.find({user: req.user})
+        const orders = await ordersModel.find({user: req.user});
         res.status(200).json({
             status: "sucess",
             orders: orders
